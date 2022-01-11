@@ -19,11 +19,6 @@
     <div class="col-sm-5">
       <h3>Record:</h3><br>
       <form action="/result" enctype = "multipart/form-data" method="POST">
-	<!-- <p>		<div id="controls">
-			<button id="recordButton">Record</button>
-			<button id="stopButton" disabled>Stop</button>
-		</div>
-	 </p> -->
          <p><input type="file" accept=" audio/wav" name="audio" required/></p>
          <p><input type="submit" class="btn btn-primary" value="Upload">
       </form>
@@ -36,9 +31,6 @@
   </div>
 </div>
 <div class="container-fluid p-1 bg-primary text-white fixed-bottom" align="center">by Mohammad Uzair Ali</div>
-
-<script src="{{ url_for('static', filename='js/WebAudioRecorder.min.js') }}" ></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}" ></script>
 
 </body>
 </html>
