@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'detectovid'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_30FAC9179E9440A785334B98461F222F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_66F37CE7954948C2954B500C308A9CE0 }}
