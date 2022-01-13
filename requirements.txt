@@ -25,4 +25,3 @@ six==1.15.0
 urllib3==1.25.9
 Werkzeug==1.0.1
 ordereddict
-pysndfile
