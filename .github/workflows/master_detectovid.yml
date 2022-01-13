@@ -15,8 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - bash: echo "##vso[task.prependpath]$CONDA/bin"
-        displayName: Add conda to PATH
         
       - uses: actions/checkout@v2
 
