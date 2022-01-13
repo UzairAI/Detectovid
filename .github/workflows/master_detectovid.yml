@@ -28,12 +28,6 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        sudo apt-get update
-        sudo apt-get install libsndfile1
-        sudo apt install autoconf autogen automake build-essential libasound2-dev 
-        libflac-dev libogg-dev libtool libvorbis-dev libopus-dev libmp3lame-dev 
-        libmpg123-dev pkg-config python
-        sudo apt-get install ffmpeg
         run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
@@ -66,4 +60,4 @@ jobs:
         with:
           app-name: 'detectovid'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A8257CB4C1684CAFA87828A0EA669D06 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0E32E5823D9A459387E7F2F549D2653E }}
