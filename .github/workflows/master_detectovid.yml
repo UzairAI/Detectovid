@@ -32,8 +32,10 @@ jobs:
 
       - name: Install libraries
         run: |
-          sudo apt-get install libsndfile1 
-          sudo apt-get install libsndfile1-dev
+          apt-get update 
+          && apt-get upgrade -y 
+          && apt-get install -y 
+          && apt-get -y install apt-utils gcc libpq-dev libsndfile-dev 
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
