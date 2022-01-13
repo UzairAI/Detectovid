@@ -21,14 +21,17 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: '3.7'
-
-      - name: Create and start virtual environment
+          
+      - name: Add conda to PATH
+        run: echo "##vso[task.prependpath]$CONDA/bin"
+        
+      - name: Create Anaconda environment
+        run: conda create --yes --quiet --name myEnvironment python=3.7
+        
+      - name: Install Anaconda packages
         run: |
-          python -m venv venv
-          source venv/bin/activate
-      
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+          conda activate myEnvironment
+          conda install --force-reinstall -y -q --name myEnvironment -c conda-forge --file requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
