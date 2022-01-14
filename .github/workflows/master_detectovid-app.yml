@@ -57,6 +57,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'detectovid'
+          app-name: 'detectovid-app'
           slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_08D74B3C962A45898C211979111EFFC2 }}
