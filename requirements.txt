@@ -25,3 +25,4 @@ urllib3==1.25.9
 Werkzeug==1.0.1
 ordereddict
 soundfile
+git+https://github.com/librosa/librosa
