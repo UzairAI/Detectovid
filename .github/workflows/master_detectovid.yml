@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          conda install librosa
+          conda install -c conda-forge librosa
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
