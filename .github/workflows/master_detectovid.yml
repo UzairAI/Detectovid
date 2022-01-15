@@ -24,6 +24,7 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
+          apt-get install libsndfile1
           python -m venv venv
           source venv/bin/activate
       
