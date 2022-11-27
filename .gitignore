@@ -1,0 +1,11 @@
+__pycache__/
+/app/__pycache__/
+.DS_Store
+.env
+.flaskenv
+*.pyc
+*.pyo
+env/
+venv/
+.venv/
+.vscode

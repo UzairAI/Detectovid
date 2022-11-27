@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Detectovid</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles/index.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+  </script>
+</head>
+<body>
+
+<div class="container-fluid p-5 bg-primary text-white text-left">
+  <h1 id style="color:{{color1}}">Dete<font color={{color}}>c</font>t<font color={{color}}>ovid</font></h1>
+  <p>Upload/Record your cough sound to get results!</p> 
+</div>
+  
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-5">
+      <h3>Cough Sound:</h3>
+      <div id="speechContainer">
+        <form action="/result" enctype = "multipart/form-data" method="POST" id="upldData">
+          <input type="radio" id="record" name="upld_choice" value="record" onclick="viewRcrd();">
+          <label for="record">Record Now</label><br>
+          <input type="radio" id="upload" name="upld_choice" value="upload" onclick="viewUpld();">
+          <label for="upload">Upload From File</label><br>
+          <p><input type="file" accept=" audio/wav" name="audio" id="inp" /></p>
+          <p><button type="button" id="recordButton">Record</button>
+            <div id="recordingsList"><audio id="sound" src controls></audio></div>
+          </p>
+          <p><input type="submit" class="btn btn-primary" id="upld" value="Upload"></p>
+        </form>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <h3>Result:</h3>
+      <p>{{ prediction_text }}</p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid p-1 bg-primary text-white fixed-bottom" align="center">by Mohammad Uzair Ali</div>
+
+<script src="../static/js/WebAudioRecorder.js"></script>
+<script src="../static/js/app.js"></script>
+</body>
+</html>
